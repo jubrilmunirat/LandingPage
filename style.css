@@ -258,3 +258,32 @@ footer {
         gap: 12px;
     }
 }
+
+/* Container layout using Flexbox by default */
+/* Default layout for larger screens (laptops/desktops): Flexbox */
+/* Default layout for laptops and larger screens (Flexbox) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Base card styling for flex distribution */
+.card-container .card {
+    flex: 1 1 300px;
+}
+
+/* Media query for small devices (mobile screens under 768px) */
+@media (max-width: 768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card-container .card {
+        width: 80%;
+    }
+}
